@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Барбершоп «Бородинский»</title>
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic " rel="stylesheet"> <!--  "barbershop/fonts/PTSans"-->
+      <link href="css/normalize.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+  </head>
+    
+  <body class="inner-page">
+    <header>
+      <nav class="main-navigation">
+       <a><!--контейнер для логотипа -->
+        <img src="img/logo-small.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
+       </a>
+       <ul class="site-navigation"><!-- меню-->
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="price.html">Прайс-лист</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+       </ul>
+        <ul class="user-navigation">
+          <li>
+             <!--<button type="button">Вход</button>-->
+              <a href="login.html">
+                  Вход
+              </a>  
+           </li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+        
+        <h1 class="page-title">Средство для ухода</h1>
+        <ul class="breadcrumbs"><!-- меню, хлебные крошки-->
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li class="breadcrumbs-current">Средства для ухода</li><!-- ссылка не нужна такак это текущая станийа-->
+        </ul>
+       
+        
+        <section class="filters"><!-- РАЗДЕЛ ПРОИЗВОДИТЕЛИ-->
+            <h2 class="visually-hidden">Фильтр товаров</h2><!--этот заголовок потом уберем, поэтому добавили класс visually-hidden, но для скринридера нужно -->
+            <form class="filter" action="https://echo.htmlacademy.ru" method="get"><!-- метод get потому что мы данные парметры отправляем в аресную строку-->
+               <fieldset><!-- группа полей-->
+                   <legend>Производители:</legend>
+                   <ul>
+                      <li><!-- атрибут checked у поля означает чо он выбран-->
+                         <input class = "visually-hidden filter-input" id = "filter-baxter-of-california" type = "checkbox" name = "baxter-of-california" checked>
+                         <label for = "filter-baxter-of-california">Baxter of California </label><!--связываем label и input -->
+                      </li>
+                      <li>
+                          <input class = "visually-hidden filter-input" id = "filter-mr-natty" type="checkbox" name="mr-natty">
+                          <label for = "filter-mr-natty">Mr Natty</label>
+                      </li>
+                      <li>
+                           <input class = "visually-hidden filter-input" id = "filter-suavecuty" type="checkbox" name="suavecuty" checked>
+                           <label for = "filter-suavecuty">Suavecuty</label>
+                      </li>
+                      <li>
+                           <input class = "visually-hidden filter-input" id = "filter-malin+goetz" type = "checkbox" name = "malin+goetz">
+                           <label for="ilter-malin+goetz">Malin+Goetz</label>
+                      </li>
+                      <li>
+                           <input class = "visually-hidden filter-input" id="filter-murrays" type="checkbox" name = "murrays" disabled>
+                           <label for = "filter-murrays">Murrays</label>
+                      </li>
+                      <li>
+                           <input  class = "visually-hidden filter-input" id = "filter-american+crew"  type = "checkbox" name="american+crew" checked>
+                           <label for = "filter-american+crew">American Crew</label>
+                      </li>
+                   </ul>
+               </fieldset>
+               <fieldset class="filters"><!-- группа полей-->
+                  <legend>Группы товаров:</legend> 
+                  <ul>
+                      <li>
+                          <input  class="visually-hidden filter-input" id="filter-shave" type="radio" name="product-group"><!--у группы радиокнопок  атрибут name долен бытьу всех один и тот же -->
+                          <label for="filter-shave">Бритвенные принадлежности</label>
+                      </li> 
+                      <li>
+                          <input class="visually-hidden filter-input" id="filter-care" type="radio" name="product-group" checked><!-- выделенный радиокнопка-->
+                          <label for="filter-care">Средства для ухода</label>
+                      </li>
+                      <li>
+                          <input class="visually-hidden filter-input"  id="filter-accessories" type="radio" name="product-group">
+                          <label for="filter-accessories">Акксесуары</label>
+                      </li>
+                  </ul>
+               </fieldset>
+               <button type="submit">
+                    Показать
+               </button>
+            </form>
+        </section>
+       
+        
+        <section><!--РАЗДЕЛ КАРТОЧЕК -->
+           <h2 class="visually-hidden">Список средств для ухода</h2><!--этот заголовок потом уберем -->
+           <ul class="catalog-list" ><!--список карточек это неупорялоченный список -->
+               <li class="catalog-item"><!-- картчока товара-->
+                 <a href="catalog-item.html">   
+                    <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
+
+                        <span class="catalog-category">Набор для путешествий</span> 
+                        <span>«Baxter of California»</span>
+
+                    </h3>
+                    <p> <!--Клик по фотографии товара открывает полноразмерное фото -->
+                        <img src="img/tovar1.jpg" width="220" height="160" alt="Набор для путешествий «Baxter of California»"><!-- изобраение является контентым поэтому тег img-->
+                    </p>
+                </a>
+                <p class="catalog-item-price">
+                    <b>2900 P</b>
+                    <a  class="button" href="#">Купить</a><!--ссылка в виде кнопки, добавляет продкуткв коризну-->
+                </p>
+               </li>
+               <li class="catalog-item"><!-- картчока товара-->
+                  <a href="catalog-item.html">
+                    <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
+                       
+                           <span class="catalog-category">Увлажняющий кондиционер</span> 
+                           <span>«Baxter of California»</span>
+                       
+                    </h3>
+                    <p> <!--Клик по фотографии товара открывает полноразмерное фото -->
+                       <img src="img/tovar2.jpg" width="220" height="160" alt="Набор для путешествий «Baxter of California»"><!-- изораение является контентым поэтому тег img-->
+                    </p>
+                  </a>
+                  <p class="catalog-item-price">
+                       <b>750 P</b>
+                       <a class="button" href="#">Купить</a><!--ссылка вв виде кнопки, добавляет продкуткв коризну-->
+                  </p> 
+               </li>
+               <li class="catalog-item"><!-- картчока товара-->
+                 <a href="catalog-item.html">
+                   <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
+                       
+                           <span class="catalog-category">Гель для волос</span> 
+                           <span>«Baxter of California»</span>
+                       
+                   </h3>
+                   <p> <!--Клик по фотографии товара открывает полноразмерное фото -->
+                       <img src="img/tovar3.jpg" width="220" height="160" alt="Набор для путешествий «Baxter of California»"><!-- изораение является контентым поэтому тег img-->
+                   </p>
+                </a>   
+                <p class="catalog-item-price">
+                       <b>290 P</b>
+                       <a  class="button" href="#">Купить</a><!--ссылка вв виде кнопки, добавляет продкуткв коризну-->
+                </p> 
+               </li>
+               <li class="catalog-item"><!-- картчока товара-->
+                 <a href="catalog-item.html">
+                  <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
+                       
+                           <span class="catalog-category">Гель для укладки  волос</span> 
+                           <span>«Baxter of California»</span>
+                       </a>
+                   </h3>
+                   <p> <!--Клик по фотографии товара открывает полноразмерное фото -->
+                      <img src="img/tovar4.jpg" width="220" height="160" alt="Набор для путешествий «Baxter of California»"><!-- изораение является контентым поэтому тег img-->
+                   </p>
+                </a>
+                <p class="catalog-item-price">
+                       <b>500 P</b>
+                       <a  class="button" href="#">Купить</a><!--ссылка вв виде кнопки, добавляет продкуткв коризну-->
+                </p> 
+               </li>
+               <li class="catalog-item"><!-- картчока товара-->
+                 <a href="catalog-item.html">
+                   <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
+                       
+                           <span class="catalog-category">Гель для  волос</span> 
+                           <span>«Baxter of California»</span>
+                       
+                   </h3>
+                   <p> <!--Клик по фотографии товара открывает полноразмерное фото -->
+                      <img src="img/tovar5.jpg" width="220" height="160" alt="Набор для путешествий «Baxter of California»"><!-- изораение является контентым поэтому тег img-->
+                   </p>
+                 </a>     
+                 <p class="catalog-item-price">
+                       <b>300 P</b>
+                       <a class="button"  href="#">Купить</a><!-- поскольку Купить это отдельная страница то  делаем ссылку вв виде кнопки, добавляет продкуткв коризну-->
+                 </p> 
+               </li>
+               <li class="catalog-item"><!-- картчока товара-->
+                 <a href="catalog-item.html">
+                  <h3><!-- по нажатию на текст пеереходим на нужную страницу-->
+                       
+                           <span class="catalog-category">Набор для бритья</span> 
+                           <span>«Baxter of California»</span>
+                       
+                  </h3>
+                  <p> <!--Клик по фотографии товара открывает полноразмерное фото -->
+                       <img src="img/tovar6.jpg" width="220" height="160" alt="Набор для путешествий «Baxter of California»"><!-- изораение является контентым поэтому тег img-->
+                  </p>
+                 </a>     
+                 <p class="catalog-item-price">
+                       <b>3900 P</b>
+                       <a class="button" href="#">Купить</a><!--ссылка вв виде кнопки, добавляет продкуткв коризну-->
+                 </p> 
+               </li>
+           </ul>
+           <ul class="pagination-list"><!-- ПАГИНАЦИЯ -->
+               <li class="pagination-item"><a href="#">1</a></li>
+               <li class="pagination-item pagination-item-current">2</li><!--эта страница выделена -->
+               <li class="pagination-item"><a href="#">3</a></li>
+               <li class="pagination-item"><a href="#">4</a></li>
+           </ul>
+        </section>
+                   
+                   
+    </main>
+            
+    <footer><!-- ПОДВАЛ-->
+        <p>
+        Барбершоп «Бородинский»<br>
+        Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+        <a href="map.html">Как нас найти?</a><br>
+        Телефон: +7 (812) 666-02-66
+        </p> 
+        <div>
+            <p>Давайте дружиить!</p>
+            <ul> <!-- неупорядоченный спсиок-->
+                <li><a href="">Вконтакте </a></li>
+                <li><a href="">Фейсбук </a></li>
+                <li><a href="">Инстаграм </a></li>
+            </ul>
+        </div>
+        <p>
+            Разработано:
+            <a href="https://htmlacademy.ru">HTML Academy</a><!--ссылка в виде кнопки -->
+        </p>
+    </footer>
+            
+    <section><!-- попап Войти-->
+      <h2>Личный кабинет</h2>
+      <p>Введите свой логин и пароль.</p>
+      <form action="https://echo.htmlacademy.ru" method="post">
+         <p>
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="email@example.com">
+         </p>
+         <p>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="••••••••">
+         </p>
+         <p class="login-password-info">
+            <label class="login-checkbox">
+            <input type="checkbox" name="remember" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            Запомните меня
+            </label>
+            <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <button type="button">Закрыть</button><!--верхняя кнопка закрытия Крестик  -->
+    </section>
+      
+  </body>
+</html>

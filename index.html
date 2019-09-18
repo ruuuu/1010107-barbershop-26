@@ -2,11 +2,184 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Барбершоп</title>
+    <title>Барбершоп «Бородинский»</title>
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet"> <!--подключаем шрифты -->
+      <link href="css/normalize.css" rel="stylesheet"><!--для кроссбраузерности -->
+      <link href="css/style.css" rel="stylesheet"><!-- наш файл-->
   </head>
+    
   <body>
+    <header>
+        
+      <nav  class="main-navigation"> 
+       <a><!--контейнер для логотипа -->
+        <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
+       </a>
+       <ul class="site-navigation"><!-- менюверхнее меню-->
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="price.html">Прайс-лист</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+       </ul>
+        <ul class="user-navigation">
+          <li>
+             <!--<button type="button">Вход</button>-->
+              <a href="login.html"><!--  переход на др станицу-->
+                  Вход
+              </a>  
+           </li>
+        </ul>
+      </nav>
+        
+    </header>
+    
+    <main>
+        <h1>Барбершоп «Бородинский»</h1>
+        
+        <section><!-- РАЗДЕЛ Преимущества-->
+            <h2>Преимущества</h2>
+            <!--Каждое преимущество — элемент неупорядоченного списка преимуществ -->
+            <ul class="features-list">
+              <li class="feature-item">
+                <h3>Быстро</h3>
+                <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки!</p>
+              </li>
+              <li class="feature-item">
+                <h3>Круто</h3>
+                <p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне. </p>
+              </li>
+              <li class="feature-item">
+                <h3>Дорого</h3>
+                <p>Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус? </p>
+              </li>
+            </ul>
+        </section>
+        
+        <div class="index-columns"> <!-- как ка краздел новости и галереи  име/т оидн общий фон, поэтому оборачиваем их-->
+            <section><!--РАЗДЕЛ Новостей -->
+                 <h2>Новости</h2>
+                 <ul class="news-list"> <!-- Лента новостей -это неупордядоченный список, каждая нвоость это элмнт спсика -->
+                    <li class="news-item"> 
+                        <p>Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
+                        <time datetime="2019-01-11">11 января</time>
+                    </li>
+                    <li class="news-item"> 
+                        <p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды</p>
+                        <time datetime="2016-01-18">18 января</time>
+                    </li> 
+                 </ul>
+                 <a  class="button" href="news.html">Все новости</a><!-- ссылки ввиде кнопок-->
+            </section>
+        
+            <section><!--РАЗДЕЛ Фотогалерея -->
+               <h2>Фотогалерея</h2> 
+               <figure class="gallery-content"><!-- Контейнер для картинок -->
+                  <!-- фотку(превью) обрачиваем в ссылку, так ак при нажатии на ссылку получаем полноразмерную фотку--> 
+                   <a href="#"><img src="img/barbershop-index1.jpg"  width="286" height="164" alt="Интерьер"> </a><!--указываем размеры изображения -->
+               </figure>     
+               <button  class="button" type="button">Назад</button><!--кнопки переключений фоток-->
+               <button  class="button" type="button">Вперед</button> 
+            </section>
+        </div>    
+        
+        <div class="index-columns"> <!-- объединили два раздела Контактная информация и Записаться-->      
+            <section><!--РАЗДЕЛ Контактная информация -->
+                <h2>Контактная информация</h2>
+                <p>
+                   Барбершоп «Бородинский»<br>
+                   Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+                   Телефон: +7 (812) 666-02-66
+                </p>
+                <p>
+                    Время работы:<br>
+                    пн—пт: с 10:00 до 22:00<br>
+                    сб—вс: с 10:00 до 19:00
+                </p>
+                <a  class="button" href="map.html">Как проехать</a><!-- ссылки в виде кнопок-->
+                <a  class="button" href="contacts.html"> Обратная связь</a>
+            </section>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+            <section><!-- РАЗДЕЛ Записаться -->
+                <h2>Записаться</h2>
+                <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+                <form action="https://echo.htmlacademy.ru" method="post"> <!--данные формы отправляются сюда https://echo.htmlacademy.ru-->
+                    <p class="appointment-item">
+                        <label for="appointment-date">Дата</label><!--связываем  подпис(лейбл по for) и поле по id-->
+                        <input  id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017"> <!-- Атрибут value задаёт значение поля ввода по умолчанию, зачение поля name  отправляется на сервер в качетве названия переменной-->
+                    </p>
+                    <p class="appointment-item">
+                        <label for="appointment-time">Время</label>
+                        <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+                    </p>
+                    <p class="appointment-item">
+                        <label for="appointment-name">Ваше имя</label>
+                        <input id="appointment-name" type="text"  name="name" value="" placeholder="Борода">
+                    </p>
+                    <p class="appointment-item">
+                        <label for="appointment-phone">Телефон</label>
+                        <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+                    </p>
+                    <button class="button"  type="submit">Отправить</button><!-- кнопка отправки данных формы-->
+                </form>
+            </section>
+        </div>    
+    </main>
+            
+    <footer class="main-footer"><!-- ПОДВАЛ-->
+        <p class="footer-contacts">
+            Барбершоп «Бородинский»<br>
+            Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+            <a href="map.html">Как нас найти?</a><br>
+            Телефон: +7 (812) 666-02-66
+        </p> 
+        <div class="footer-social"> <!-- соц сети-->
+            <p>Давайте дружиить!</p>
+            <ul> <!-- неупорядоченный спсиок-->
+                <li><a class="social-button" href="#">Вконтакте </a></li>
+                <li><a class="social-button" href="#">Фейсбук </a></li>
+                <li><a  class="social-button" href="#">Инстаграм </a></li>
+            </ul>
+        </div>
+        <p class="footer-copyright">
+            Разработано:
+            <a  class="button" href="https://htmlacademy.ru">HTML Academy</a><!--ссылка в виде кнопки -->
+        </p>
+    </footer>
+            
+    <section class="modal"><!-- попап(модальное окно) Личный кабинет-->
+        <h2>Личный кабинет</h2>
+        <p>Введите свой логин и пароль.</p>
+        
+        <form class="login-form" sction="https://echo.htmlacademy.ru" method="post">
+            <p> 
+                <label for="user-login">Логин </label>
+                <input  id="user-login"  type="text" name="login" placeholder="email@example.com"> 
+            </p>
+            <p>
+                <label for="user-password">Пароль</label>
+                <input  id="user-password" type="password" name="password" placeholder="••••••••">
+            </p>
+            <p>
+                <label class="login-checkbox"> <!--чтобы не использовать много id, можно просто поле input обернуть в <label> -->
+                    <input type="checkbox" name="remember">
+                    Запомните меня
+                </label>
+                <a class="restore" href="#"> Я забыл пароль!</a>
+            </p>
+            <button class="button"  type="submit"> <!-- кнопка отправки данных формы-->
+                Войти
+            </button>
+        </form>
+        <button type="button">Закрыть </button><!-- верхняя кнпока Крестик, чобы закрыть модальное окно-->
+    </section>
+            
+    <section class="modal"><!-- попап Как до нас добраться-->
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+            <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"><!--в  alt запсиываем сам адрес, что скринриадер сомг прочитать адрес -->
+        </p>
+       <button type="button">Закрыть </button><!--крестик вверху -->
+    </section>
   </body>
 </html>

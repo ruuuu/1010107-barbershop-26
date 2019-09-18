@@ -1,0 +1,390 @@
+body{
+
+    margin: 0; /*по умолчанию есть отступы поэтому их убираем*/
+    padding: 0;
+    font-family: "PT Sans Narrow", Arial, sans-serif;/*стили для базового шрифта, который встречается чаще всего в макете.*/
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff; /*цвет етктс абелый*/
+    text-transform: uppercase; /*буквы текста большие*/
+    background-color: #000000;
+    background-image: url("img/bg.jpg"); /*фоновое изображение НЕ ВСТАВЛЯЕТСЯ ФОНОВОЕИЗОБРАЖЕИЕ*/
+    background-position: top center;
+    background-repeat: no-repeat;/*фоновое изображение не повторяется*/
+
+
+}
+
+ /*стили для index.html*/
+a {
+    text-decoration: none; /*у  всех ссылок в проекте   убираем пнижнее подчеркивание, котрое ставит браузер по умолчанию*/
+}
+
+
+/* стили для БЛОК НАВИГАЦИЯ*/
+.main-navigation { /* для верхнее меню*/
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  background-color: #000000;/* фонове изображение черное*/
+}
+
+
+.site-navigation,
+.user-navigation {
+  list-style: none; /*маркеры у спсика меню убираем, так как их савит сам ьраузер по умолчанию, задаем самомеу спсику ul*/
+}
+
+
+.site-navigation a,
+.user-navigation a{ /*цвет ссылок в верхнем меню белый*/
+    color: #ffffff;
+}
+
+
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  background-color: #242424; /*фоновый цвает менямся*/
+}
+
+
+/* стили для блок ПРЕИМУЩЕСТВА*/
+.features-list{
+    list-style: none; /*убираему спсика маркеры, это свойство задаем спсику!!!*/
+}
+
+.feature-item{
+    text-align: center; /*выранвиевание тектса по центру*/
+}
+
+
+
+.feature-item h3{/*стиль для названий переимуществ(Бвсро, Круто. Дорого)*/
+  font-size: 30px;
+  line-height: 42px;
+}
+
+
+
+/* стили для БЛОК НОВОСТИ и ФОТОГАЛЕРЕЯ*/
+
+.index-columns{
+  color: #000000;
+  background-color: #f8f5f2;/*фоновый цвет*/
+  background-image: url("img/layer-24-copy.jpg");/*фоновое изображение  НЕ ВСТАВЛЯЕТСЯ ФОНОЕ ИЗОБРАЖЕНИЕ*/
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+
+.index-columns h2 { /*заголоаки  слов НОВОСТИ И ФОТОГАЛЕРЕЯ*/
+  font-size: 30px;
+  line-height: 42px;
+}
+
+
+.news-list { /*список новостей*/
+  list-style: none;  /*убираем маркеры  у пунтков спсика*/
+}
+
+
+.news-item time{/* дата у пункта  новостей*/
+    text-transform: none; /*маленький шрифт*/
+}
+
+
+
+
+.gallery-content{
+    background-color: #cccccc; /*фонове изоражение еси картинка ен подгрузится*/
+    border: 7px solid #ffffff; /*рамка*/
+}
+
+
+.button{ /*стили для кнопок всех*/
+    font: inherit; /*унаследуем все свойства шрифов от родителя*/
+    text-align: center; /*текст распложим по центру*/
+    color: #ffffff;
+    vertical-align: middle; /*вертикальное выравнивание текста*/
+    text-transform: uppercase; /*тектс большими буквами**/
+    background-color: #000000;
+    border: none; /*границ нет*/
+}
+
+.button:hover, /*последовательность правил ВАЖНА! иначе непраивльно будет рабоать!*/
+.button:focus, /* то есть устанвоили в поле курсор*/
+.button:active {
+  background-color: #663d15;
+}
+
+
+.appointment-item input{ /*текстовые поля формы Записаться*/
+    font: inherit; /*унаследованли своства шрифтов от body*/
+    background-color: transparent; /*фоновый цвет прозрачный*/
+
+    border: 2px solid #000000;
+}
+
+.appointment-item input:focus{
+    border-color: #663d15; /*цвет рамки поля при фокусе(то есть установили курсор к поле)*/
+}
+
+
+
+
+
+/*стили для ПОДВАЛА*/
+.main-footer{
+    color: #ffffff;
+    background-color: #212121; /*фоновый цвет*/
+    background-image: url("img/layer-23.jpg"); /*это изображение отобразилось!*/
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+
+.footer-contacts a{
+    text-decoration: underline; /*доюавляем подверкивание ссылке  КАК нас найти */
+    color: #ffffff;
+}
+
+.footer-contacts a:hover, /*при фокусе(устаноили курсор) и при наведении нижннее подчеркивание убираем*/
+.footer-contacts a:focus {
+  text-decoration: none; /*нижнее подчеркивание убиаем*/
+}
+
+
+.footer-social {
+    text-align: center; /*центрируем блок ссылок соц сетей*/
+}
+
+.footer-social ul{
+list-style: none; /*убираем у спсика ссылок маркеры*/
+}
+
+
+.social-button{
+    color: #ffffff;
+}
+
+.footer-copyright {
+  text-align: center;
+}
+
+
+
+.footer-copyright  .button:hover,
+.footer-copyright  .button:focus{
+    color: #000000;
+    background-color: #ffffff;
+    background-position: 0 0; /**/
+    background-repeat: repeat;
+}
+
+
+
+
+
+
+/*СТИЛИ ДЛЯ МОДАЛЬНЫХ ОКОН*/
+.modal{
+    color: #000000;
+    background-color: #f8f3f0;
+    background-image: url("img/layer-24-copy.jpg");
+}
+
+
+
+.modal h2 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+
+/*для формы ввода поля*/
+.login-form input[type="text"],
+.login-form input[type="password"]
+{
+    font: inherit; /*наслдуем родительский шрифт*/
+    color: #000000;
+    text-transform: uppercase;/*большие буквы*/
+    background-color: #f9f6f3;
+    border: 2px solid #000000;
+}
+
+
+
+.login-form input:focus{ /*при установки  курсора на поле*/
+    border-color: #663d15; /*цвет рамки поля*/
+}
+
+.login-checkbox:hover,
+.login-checkbox:focus
+{
+    color: #663d15;/*цвет текст аменяется*/
+}
+
+.restore{
+    text-decoration: underline;/*нижнее подчеркивание*/
+    color: #000000;
+}
+
+
+.restore:hover,
+.restore:focus {
+  text-decoration: none; /*нижнее подверкиивание  убираем*/
+}
+
+
+
+
+
+/* СТИЛИ ДЛЯ СТРАНИЦЫ catalog.html*/
+
+.inner-page{
+
+    color: #000000;
+    background-color: #f9f6f3; /*цвет фона*/
+    background-image: url("img/layer-24-copy.jpg");/*фоновое изоображение*/
+    background-position: 0 0; /*координат левого верхнего угла*/
+    background-repeat: repeat; /*повторяем фоново еизоюражение*/
+
+}
+
+.page-title{
+    /*для h1*/
+    font-size: 30px;
+    line-height: 42px;/*высота букв*/
+}
+
+.breadcrumbs{
+
+    list-style: none; /*уираем маркеры уссылок6 ктрый ставит браузер по умолчанию*/
+}
+
+.breadcrumbs a{
+
+    color: #000000;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus{
+    /*при навдеение на ссылку и если она в фокусе(наведение курсора)*/
+    text-decoration: underline; /*она подчеркисвается*/
+
+}
+
+
+.breadcrumbs-current { /*цвет текущей ссылки в хлеюных крошках*/
+  color: #aba9a7;
+}
+
+.filter  fieldset{
+
+    border: none; /*убираем  обводку у fieldset()*/
+}
+
+.filter legend{
+
+    font-size: 24px;
+    line-height: 30px;
+
+}
+
+.filter ul{
+
+    list-style: none;/*убираем маркеты у списк акторый ставит браузер по умолчанию*/
+    line-height: 18px; /*высота строки*/
+}
+
+.filter-input:hover + label,
+.filter-input:hover + label { /*labe котрый СРАЗУ ижет поле .filter-input*/
+    color: #663d15;
+
+}
+
+.filter-input:disabled{ /*для задизейбленного поля*/
+
+    color: #000000;
+    opacity: 0.5;
+}
+
+.catalog-list{ /*меню карточек товаров*/
+    list-style: none;/*убираем маркеты у пунктов(карточек товара) меню котрый ставит сам браузер*/
+
+}
+
+
+.catalog-item{ /*задаем картчоке товара*/
+    background-color: #f8f8f8;  /*фоновый цвет и тень*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.catalog-item:hover{ /*при наведении на картчоку*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.catalog-item a{ /*цыет текста ссылки на картчоке товара*/
+    color: #000000;
+}
+
+
+.catalog-item h3{ /*закголовки вкартчоках*/
+
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.catalog-category{/*навазния в картчоках товаров */
+    text-transform: none; /*текст делает маленькими буквами*/
+}
+
+.catalog-item-price b{ /*стиль дял цены товара*/
+
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;/*выранвиенива тектс апо центру*/
+    background-color: #e5e5e5; /*фоновый цвет(светло-верый)*/
+}
+
+.catalog-item-price .button{ /*кнопку Купиь на картчоке товара*/
+    line-height: 20px;
+    color: #ffffff;  /*белый цвет*/
+}
+
+.pagination-list{ /*пагинация(список)*/
+    list-style: none;  /*убираем у спунктов списка маркеры. котрый ставит см браузер*/
+}
+
+.pagination-item a{ /*стиль ссылкамв пагинации*/
+    color:  #ffffff;  /*белый цвет  текста  у ссылки*/
+    background-color: #000000; /*цвет фона черный*/
+}
+
+.pagination-item a:hover, /* ПОследоватьельность правил ВАЖНА!стиль при наведении на ссылку*/
+.pagination-item a:focus,/*стиль при фокусе на ссылку (то есть установили курсор)*/
+.pagination-item a:active { /*стиль при нажатиии на ссылку*/
+  background-color: #663d15;
+}
+
+
+.pagination-item-current a{ /*текущая сслыка  в пагинации*/
+    color:  #000000; /*цвет фона черный*/
+    background-color: #ffffff; /*цвет фона белый*/
+}
+
+.pagination-item-current a:hover,/*стиль при наведении на ссылку*/
+.pagination-item-current a:focus,/*стиль при фокусе на ссылку((то есть установили курсор)*/
+.pagination-item-current a:active {/*стиль при нажатиии на ссылку*/
+  color: #000000; /*цвет фона черный*/
+
+  background-color: #ffffff;/*цвет фона белый*/
+}
